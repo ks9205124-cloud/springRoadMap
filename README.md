@@ -8,4 +8,4 @@ My dedicated study vault and codebase tracking my journey through modern backend
 ## 🛠️ Tech Stack Baseline
 - **Java Version:** 17/21 (Jakarta Namespace)
 - **Build Tool:** Maven
-- **Core Concepts Covered:** `@Configuration`, `@Bean`, `@ComponentScan`, `@Component`, `@PostConstruct`
+- **Core Concepts Covered:** `@Configuration`, `@Bean`, `@ComponentScan`, `@Component`, `@PostConstruct`,`@Primary`,`@PreDestroy`
