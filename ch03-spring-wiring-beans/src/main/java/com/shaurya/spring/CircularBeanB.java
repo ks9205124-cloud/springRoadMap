@@ -1,5 +1,6 @@
 package com.shaurya.spring;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
@@ -7,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class CircularBeanB {
     private final CircularBeanA circularBeanA;
-
+    @Autowired
     public CircularBeanB(@Lazy CircularBeanA circularBeanA) {
         this.circularBeanA = circularBeanA;
     }
