@@ -11,11 +11,11 @@ public class Main {
         System.out.println("Before retrieving the CommentService");
 
         var commentService1 = context.getBean(CommentService.class);
-        var commentService2 = context.getBean(UserService.class);
+        var commentService2 = context.getBean(CommentService.class);
 
         System.out.println("After retrieving the CommentService");
 
-        boolean bool = commentService1.getCommentRepository() == commentService2.getCommentRepository();
+        boolean bool = commentService1 == commentService2;
 
         System.out.println(bool);
     }
