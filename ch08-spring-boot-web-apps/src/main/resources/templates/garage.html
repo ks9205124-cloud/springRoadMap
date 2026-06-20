@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Garage Management</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 40px; background-color: #f4f6f9; }
+        .wrapper { max-width: 700px; background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin: auto; }
+        h1, h3 { color: #333; }
+        form { margin-bottom: 25px; background: #fafafa; padding: 15px; border-radius: 6px; border: 1px solid #eef0f2; }
+        .form-row { margin-bottom: 12px; }
+        label { display: block; margin-bottom: 4px; font-weight: 600; font-size: 14px; }
+        input { width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
+        button { background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; width: 100%; margin-top: 10px; }
+        button:hover { background-color: #0056b3; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { border: 1px solid #dee2e6; padding: 12px; text-align: left; }
+        th { background-color: #e9ecef; color: #495057; }
+        .empty-msg { color: #6c757d; font-style: italic; text-align: center; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <h1>Shift Your Gears! 🏎️</h1>
+    <hr>
+
+    <form th:action="@{/garage}" method="post">
+        <h3>Add Vehicle to Garage</h3>
+
+        <div class="form-row">
+            <label for="garageName">Garage Name:</label>
+            <input type="text" id="garageName" name="name" placeholder="e.g., Downtown Elite BMW">
+        </div>
+
+        <div class="form-row">
+            <label for="carModel">Car Model:</label>
+            <input type="text" id="carModel" name="model" placeholder="e.g., M4 Competition">
+        </div>
+
+        <div class="form-row">
+            <label for="carPrice">Estimated Value ($):</label>
+            <input type="number" id="carPrice" name="price" step="0.01" placeholder="e.g., 78000">
+        </div>
+
+        <button type="submit">Park in Garage</button>
+    </form>
+
+    <hr>
+
+    <h3>Garaged Vehicles Inventory</h3>
+
+    <div th:if="${#lists.isEmpty(garages)}" class="empty-msg">
+        <p>Your garage is currently empty. Start parking some cars!</p>
+    </div>
+
+    <table th:unless="${#lists.isEmpty(garages)}">
+        <thead>
+        <tr>
+            <th>Garage Unit</th>
+            <th>Car Model</th>
+            <th>Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="g : ${garages}">
+            <td th:text="${g.name}">Garage Name</td>
+            <td th:text="${g.model}">Car Model</td>
+            <td th:text="'$' + ${g.price}">$0.00</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
