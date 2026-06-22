@@ -11,7 +11,9 @@ My dedicated study vault and codebase tracking my journey through modern backend
 - **Chapter 6:** Using Aspects with Spring AOP (Understanding aspect mechanics, implementing aspects with Around advice, intercepting annotated methods, and managing the aspect execution chain).
 - **Chapter 7:** Implementing web apps with Spring Boot and Spring MVC (Transitioning to Spring Boot's convention-over-configuration, booting embedded servers, and understanding the `@SpringBootApplication` lifecycle).
 - **Chapter 8:** Dynamic Views and Data Exchange (Injecting dynamic data into HTML templates using Thymeleaf; capturing client input via `@RequestParam` for query parameters and `@PathVariable` for URL path variables; handling HTTP GET/POST verbs).
-- **Chapter 9: Using Spring Web Scopes (Managing state across the web lifecycle: understanding Request, Session, and Application scopes to control bean visibility and lifecycle in a web context).**
+- **Chapter 9:** Using Spring Web Scopes (Managing state across the web lifecycle: understanding Request, Session, and Application scopes to control bean visibility and lifecycle in a web context).
+- **Chapter 10:** REST API Design and Exception Handling (Building RESTful endpoints using `@RestController` and HTTP verbs; controlling responses with `ResponseEntity` including custom status codes and headers; implementing global exception handling using `@RestControllerAdvice` and `@ExceptionHandler` to return structured error responses).
+- **Chapter 11:** Consuming REST Endpoints (Calling external REST APIs from within a Spring app using `RestTemplate` and `WebClient`; leveraging Spring Cloud OpenFeign to define declarative HTTP clients as interfaces; sending and receiving custom headers using `@RequestHeader` and `ResponseEntity`).
 
 ## 🛠️ Tech Stack Baseline
 
@@ -23,4 +25,5 @@ My dedicated study vault and codebase tracking my journey through modern backend
     - **AOP:** `@Aspect`, `@Around`, `@EnableAspectJAutoProxy`
     - **Web MVC:** `@SpringBootApplication`, `@Controller`, `@RequestMapping`, `@GetMapping`, `@PostMapping`, `@RequestParam`, `@PathVariable`
     - **Web Scopes:** `@RequestScope`, `@SessionScope`, `@ApplicationScope`
-    - **Dependencies:** `spring-boot-starter-web`, `spring-boot-starter-thymeleaf`
+    - **REST:** `@RestController`, `@ResponseBody`, `@ResponseStatus`, `@RestControllerAdvice`, `@ExceptionHandler`, `@RequestHeader`
+    - **Dependencies:** `spring-boot-starter-web`, `spring-boot-starter-thymeleaf`, `spring-cloud-starter-openfeign`
