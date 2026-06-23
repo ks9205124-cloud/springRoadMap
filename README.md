@@ -15,6 +15,7 @@ My dedicated study vault and codebase tracking my journey through modern backend
 - **Chapter 10:** REST API Design and Exception Handling (Building RESTful endpoints using `@RestController` and HTTP verbs; controlling responses with `ResponseEntity` including custom status codes and headers; implementing global exception handling using `@RestControllerAdvice` and `@ExceptionHandler` to return structured error responses).
 - **Chapter 11:** Consuming REST Endpoints (Calling external REST APIs from within a Spring app using `RestTemplate` and `WebClient`; leveraging Spring Cloud OpenFeign to define declarative HTTP clients as interfaces; sending and receiving custom headers using `@RequestHeader` and `ResponseEntity`).
 - **Chapter 12:** Data Sources and JDBC (Connecting Spring Boot to a relational database using `DataSource` and `JdbcTemplate`; executing parameterized SQL queries for CRUD operations; mapping result sets to Java objects using `RowMapper`; configuring datasource properties via `application.properties` and switching from H2 in-memory to MySQL 8.0 for persistent storage).
+- **Chapter 14:** Implementing Data Persistence with Spring Data (Replacing manual JdbcTemplate queries with Spring Data's repository abstraction; extending `CrudRepository` to auto-generate CRUD operations without writing SQL; defining custom JPQL queries using `@Query` and `@Param`; using `@Modifying` for update operations; implementing transactional money transfer between accounts using `@Transactional` to ensure atomicity — building on the transaction concepts from Chapter 13).
 ## 🛠️ Tech Stack Baseline
 
 - **Java Version:** 25 (LTS)
@@ -26,5 +27,6 @@ My dedicated study vault and codebase tracking my journey through modern backend
     - **Web MVC:** `@SpringBootApplication`, `@Controller`, `@RequestMapping`, `@GetMapping`, `@PostMapping`, `@RequestParam`, `@PathVariable`
     - **Web Scopes:** `@RequestScope`, `@SessionScope`, `@ApplicationScope`
     - **REST:** `@RestController`, `@ResponseBody`, `@ResponseStatus`, `@RestControllerAdvice`, `@ExceptionHandler`, `@RequestHeader`
-    **Data:** `@Repository`, `JdbcTemplate`, `RowMapper`, `DataSource`
-    - **Dependencies:** `spring-boot-starter-web`, `spring-boot-starter-thymeleaf`, `spring-cloud-starter-openfeign`,`mysql-connector-j`
+    - **Data:** `@Repository`, `JdbcTemplate`, `RowMapper`, `DataSource`
+    - **Spring Data:** `@Entity`, `@Id`, `@Query`, `@Modifying`, `@Param`, `@Transactional`, `CrudRepository`
+    - **Dependencies:** `spring-boot-starter-web`, `spring-boot-starter-thymeleaf`, `spring-cloud-starter-openfeign`,`mysql-connector-j`,`spring-boot-starter-data-jpa`
