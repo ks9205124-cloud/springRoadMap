@@ -19,7 +19,7 @@ My dedicated study vault and codebase tracking my journey through modern backend
 ## 🛠️ Tech Stack Baseline
 
 - **Java Version:** 25 (LTS)
-- **Build Tool:** Maven
+- **Build Tool: ** Maven
 - **Core Concepts & Annotations:** 
     - **Core:** `@Configuration`, `@Bean`, `@ComponentScan`, `@Component`, `@Service`, `@Repository`, `@Lazy`
     - **DI/Lifecycle:** `@Autowired`, `@Qualifier`, `@PostConstruct`, `@PreDestroy`, `@Scope`
